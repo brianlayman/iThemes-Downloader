@@ -37,16 +37,13 @@ class IThemesApi {
 	private static $ckfile;
 
 	// A private constructor; prevents direct creation of object
-	private function __construct() 
-	{
+	private function __construct() {
 		$this->ckfile = tempnam("/tmp", "cookie_ithemes_");
 		$this->curl = curl_init();	   
 	}
 
-	public static function getInstance() 
-	{ 
-		if (!self::$m_pInstance) 
-		{ 
+	public static function getInstance() { 
+		if (!self::$m_pInstance) { 
 			self::$m_pInstance = new IThemesApi(); 
 		} 
 
